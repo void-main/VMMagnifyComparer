@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DFBAD58419737D150090FD43 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFBAD58319737D150090FD43 /* Cocoa.framework */; };
+		DFBAD58E19737D150090FD43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD58C19737D150090FD43 /* InfoPlist.strings */; };
+		DFBAD59019737D150090FD43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBAD58F19737D150090FD43 /* main.m */; };
+		DFBAD59419737D150090FD43 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD59219737D150090FD43 /* Credits.rtf */; };
+		DFBAD59719737D150090FD43 /* VMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBAD59619737D150090FD43 /* VMAppDelegate.m */; };
+		DFBAD59A19737D150090FD43 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD59819737D150090FD43 /* MainMenu.xib */; };
+		DFBAD59C19737D150090FD43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD59B19737D150090FD43 /* Images.xcassets */; };
+		DFBAD5A319737D150090FD43 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFBAD5A219737D150090FD43 /* XCTest.framework */; };
+		DFBAD5A419737D150090FD43 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFBAD58319737D150090FD43 /* Cocoa.framework */; };
+		DFBAD5AC19737D150090FD43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD5AA19737D150090FD43 /* InfoPlist.strings */; };
+		DFBAD5AE19737D150090FD43 /* VMMagnifyComparerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBAD5AD19737D150090FD43 /* VMMagnifyComparerExampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFBAD5A519737D150090FD43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFBAD57819737D150090FD43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFBAD57F19737D150090FD43;
+			remoteInfo = VMMagnifyComparerExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DFBAD58019737D150090FD43 /* VMMagnifyComparerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMMagnifyComparerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFBAD58319737D150090FD43 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DFBAD58619737D150090FD43 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DFBAD58719737D150090FD43 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DFBAD58819737D150090FD43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DFBAD58B19737D150090FD43 /* VMMagnifyComparerExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VMMagnifyComparerExample-Info.plist"; sourceTree = "<group>"; };
+		DFBAD58D19737D150090FD43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DFBAD58F19737D150090FD43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DFBAD59119737D150090FD43 /* VMMagnifyComparerExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VMMagnifyComparerExample-Prefix.pch"; sourceTree = "<group>"; };
+		DFBAD59319737D150090FD43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DFBAD59519737D150090FD43 /* VMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMAppDelegate.h; sourceTree = "<group>"; };
+		DFBAD59619737D150090FD43 /* VMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMAppDelegate.m; sourceTree = "<group>"; };
+		DFBAD59919737D150090FD43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DFBAD59B19737D150090FD43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DFBAD5A119737D150090FD43 /* VMMagnifyComparerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VMMagnifyComparerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFBAD5A219737D150090FD43 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DFBAD5A919737D150090FD43 /* VMMagnifyComparerExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VMMagnifyComparerExampleTests-Info.plist"; sourceTree = "<group>"; };
+		DFBAD5AB19737D150090FD43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DFBAD5AD19737D150090FD43 /* VMMagnifyComparerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMagnifyComparerExampleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFBAD57D19737D150090FD43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFBAD58419737D150090FD43 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFBAD59E19737D150090FD43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFBAD5A419737D150090FD43 /* Cocoa.framework in Frameworks */,
+				DFBAD5A319737D150090FD43 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DFBAD57719737D150090FD43 = {
+			isa = PBXGroup;
+			children = (
+				DFBAD58919737D150090FD43 /* VMMagnifyComparerExample */,
+				DFBAD5A719737D150090FD43 /* VMMagnifyComparerExampleTests */,
+				DFBAD58219737D150090FD43 /* Frameworks */,
+				DFBAD58119737D150090FD43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFBAD58119737D150090FD43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFBAD58019737D150090FD43 /* VMMagnifyComparerExample.app */,
+				DFBAD5A119737D150090FD43 /* VMMagnifyComparerExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFBAD58219737D150090FD43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFBAD58319737D150090FD43 /* Cocoa.framework */,
+				DFBAD5A219737D150090FD43 /* XCTest.framework */,
+				DFBAD58519737D150090FD43 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFBAD58519737D150090FD43 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFBAD58619737D150090FD43 /* AppKit.framework */,
+				DFBAD58719737D150090FD43 /* CoreData.framework */,
+				DFBAD58819737D150090FD43 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DFBAD58919737D150090FD43 /* VMMagnifyComparerExample */ = {
+			isa = PBXGroup;
+			children = (
+				DFBAD59519737D150090FD43 /* VMAppDelegate.h */,
+				DFBAD59619737D150090FD43 /* VMAppDelegate.m */,
+				DFBAD59819737D150090FD43 /* MainMenu.xib */,
+				DFBAD59B19737D150090FD43 /* Images.xcassets */,
+				DFBAD58A19737D150090FD43 /* Supporting Files */,
+			);
+			path = VMMagnifyComparerExample;
+			sourceTree = "<group>";
+		};
+		DFBAD58A19737D150090FD43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFBAD58B19737D150090FD43 /* VMMagnifyComparerExample-Info.plist */,
+				DFBAD58C19737D150090FD43 /* InfoPlist.strings */,
+				DFBAD58F19737D150090FD43 /* main.m */,
+				DFBAD59119737D150090FD43 /* VMMagnifyComparerExample-Prefix.pch */,
+				DFBAD59219737D150090FD43 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFBAD5A719737D150090FD43 /* VMMagnifyComparerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DFBAD5AD19737D150090FD43 /* VMMagnifyComparerExampleTests.m */,
+				DFBAD5A819737D150090FD43 /* Supporting Files */,
+			);
+			path = VMMagnifyComparerExampleTests;
+			sourceTree = "<group>";
+		};
+		DFBAD5A819737D150090FD43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFBAD5A919737D150090FD43 /* VMMagnifyComparerExampleTests-Info.plist */,
+				DFBAD5AA19737D150090FD43 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFBAD57F19737D150090FD43 /* VMMagnifyComparerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFBAD5B119737D150090FD43 /* Build configuration list for PBXNativeTarget "VMMagnifyComparerExample" */;
+			buildPhases = (
+				DFBAD57C19737D150090FD43 /* Sources */,
+				DFBAD57D19737D150090FD43 /* Frameworks */,
+				DFBAD57E19737D150090FD43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VMMagnifyComparerExample;
+			productName = VMMagnifyComparerExample;
+			productReference = DFBAD58019737D150090FD43 /* VMMagnifyComparerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFBAD5A019737D150090FD43 /* VMMagnifyComparerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFBAD5B419737D150090FD43 /* Build configuration list for PBXNativeTarget "VMMagnifyComparerExampleTests" */;
+			buildPhases = (
+				DFBAD59D19737D150090FD43 /* Sources */,
+				DFBAD59E19737D150090FD43 /* Frameworks */,
+				DFBAD59F19737D150090FD43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFBAD5A619737D150090FD43 /* PBXTargetDependency */,
+			);
+			name = VMMagnifyComparerExampleTests;
+			productName = VMMagnifyComparerExampleTests;
+			productReference = DFBAD5A119737D150090FD43 /* VMMagnifyComparerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFBAD57819737D150090FD43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Void Main";
+				TargetAttributes = {
+					DFBAD5A019737D150090FD43 = {
+						TestTargetID = DFBAD57F19737D150090FD43;
+					};
+				};
+			};
+			buildConfigurationList = DFBAD57B19737D150090FD43 /* Build configuration list for PBXProject "VMMagnifyComparerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFBAD57719737D150090FD43;
+			productRefGroup = DFBAD58119737D150090FD43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFBAD57F19737D150090FD43 /* VMMagnifyComparerExample */,
+				DFBAD5A019737D150090FD43 /* VMMagnifyComparerExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFBAD57E19737D150090FD43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFBAD58E19737D150090FD43 /* InfoPlist.strings in Resources */,
+				DFBAD59C19737D150090FD43 /* Images.xcassets in Resources */,
+				DFBAD59419737D150090FD43 /* Credits.rtf in Resources */,
+				DFBAD59A19737D150090FD43 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFBAD59F19737D150090FD43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFBAD5AC19737D150090FD43 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFBAD57C19737D150090FD43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFBAD59019737D150090FD43 /* main.m in Sources */,
+				DFBAD59719737D150090FD43 /* VMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFBAD59D19737D150090FD43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFBAD5AE19737D150090FD43 /* VMMagnifyComparerExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFBAD5A619737D150090FD43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFBAD57F19737D150090FD43 /* VMMagnifyComparerExample */;
+			targetProxy = DFBAD5A519737D150090FD43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DFBAD58C19737D150090FD43 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFBAD58D19737D150090FD43 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DFBAD59219737D150090FD43 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFBAD59319737D150090FD43 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DFBAD59819737D150090FD43 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFBAD59919737D150090FD43 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		DFBAD5AA19737D150090FD43 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFBAD5AB19737D150090FD43 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFBAD5AF19737D150090FD43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DFBAD5B019737D150090FD43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DFBAD5B219737D150090FD43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VMMagnifyComparerExample/VMMagnifyComparerExample-Prefix.pch";
+				INFOPLIST_FILE = "VMMagnifyComparerExample/VMMagnifyComparerExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DFBAD5B319737D150090FD43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VMMagnifyComparerExample/VMMagnifyComparerExample-Prefix.pch";
+				INFOPLIST_FILE = "VMMagnifyComparerExample/VMMagnifyComparerExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DFBAD5B519737D150090FD43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VMMagnifyComparerExample.app/Contents/MacOS/VMMagnifyComparerExample";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VMMagnifyComparerExample/VMMagnifyComparerExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VMMagnifyComparerExampleTests/VMMagnifyComparerExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DFBAD5B619737D150090FD43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VMMagnifyComparerExample.app/Contents/MacOS/VMMagnifyComparerExample";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VMMagnifyComparerExample/VMMagnifyComparerExample-Prefix.pch";
+				INFOPLIST_FILE = "VMMagnifyComparerExampleTests/VMMagnifyComparerExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFBAD57B19737D150090FD43 /* Build configuration list for PBXProject "VMMagnifyComparerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFBAD5AF19737D150090FD43 /* Debug */,
+				DFBAD5B019737D150090FD43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFBAD5B119737D150090FD43 /* Build configuration list for PBXNativeTarget "VMMagnifyComparerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFBAD5B219737D150090FD43 /* Debug */,
+				DFBAD5B319737D150090FD43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DFBAD5B419737D150090FD43 /* Build configuration list for PBXNativeTarget "VMMagnifyComparerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFBAD5B519737D150090FD43 /* Debug */,
+				DFBAD5B619737D150090FD43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFBAD57819737D150090FD43 /* Project object */;
+}
