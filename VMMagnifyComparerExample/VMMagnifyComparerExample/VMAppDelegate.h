@@ -8,8 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class VMMagnifyComparerView;
 @interface VMAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet VMMagnifyComparerView *magnifyComparerView;
 
 @end

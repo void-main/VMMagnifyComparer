@@ -18,6 +18,10 @@
 		DFBAD5A419737D150090FD43 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFBAD58319737D150090FD43 /* Cocoa.framework */; };
 		DFBAD5AC19737D150090FD43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD5AA19737D150090FD43 /* InfoPlist.strings */; };
 		DFBAD5AE19737D150090FD43 /* VMMagnifyComparerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBAD5AD19737D150090FD43 /* VMMagnifyComparerExampleTests.m */; };
+		DFBAD5B919737F580090FD43 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD5B719737F580090FD43 /* image1.png */; };
+		DFBAD5BA19737F580090FD43 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD5B819737F580090FD43 /* image2.png */; };
+		DFBAD5BD19737FA70090FD43 /* VMMagnifyComparerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBAD5BC19737FA70090FD43 /* VMMagnifyComparerView.m */; };
+		DFBAD5C01973DF7D0090FD43 /* border.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD5BF1973DF7D0090FD43 /* border.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,11 @@
 		DFBAD5A919737D150090FD43 /* VMMagnifyComparerExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VMMagnifyComparerExampleTests-Info.plist"; sourceTree = "<group>"; };
 		DFBAD5AB19737D150090FD43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DFBAD5AD19737D150090FD43 /* VMMagnifyComparerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMagnifyComparerExampleTests.m; sourceTree = "<group>"; };
+		DFBAD5B719737F580090FD43 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		DFBAD5B819737F580090FD43 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
+		DFBAD5BB19737FA70090FD43 /* VMMagnifyComparerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VMMagnifyComparerView.h; path = ../../VMMagnifyComparer/VMMagnifyComparerView.h; sourceTree = "<group>"; };
+		DFBAD5BC19737FA70090FD43 /* VMMagnifyComparerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VMMagnifyComparerView.m; path = ../../VMMagnifyComparer/VMMagnifyComparerView.m; sourceTree = "<group>"; };
+		DFBAD5BF1973DF7D0090FD43 /* border.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = border.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +124,14 @@
 		DFBAD58919737D150090FD43 /* VMMagnifyComparerExample */ = {
 			isa = PBXGroup;
 			children = (
+				DFBAD5BE19737FAE0090FD43 /* VMMagnifyComparerView */,
 				DFBAD59519737D150090FD43 /* VMAppDelegate.h */,
 				DFBAD59619737D150090FD43 /* VMAppDelegate.m */,
 				DFBAD59819737D150090FD43 /* MainMenu.xib */,
 				DFBAD59B19737D150090FD43 /* Images.xcassets */,
+				DFBAD5B719737F580090FD43 /* image1.png */,
+				DFBAD5B819737F580090FD43 /* image2.png */,
+				DFBAD5BF1973DF7D0090FD43 /* border.pdf */,
 				DFBAD58A19737D150090FD43 /* Supporting Files */,
 			);
 			path = VMMagnifyComparerExample;
@@ -152,6 +165,15 @@
 				DFBAD5AA19737D150090FD43 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFBAD5BE19737FAE0090FD43 /* VMMagnifyComparerView */ = {
+			isa = PBXGroup;
+			children = (
+				DFBAD5BB19737FA70090FD43 /* VMMagnifyComparerView.h */,
+				DFBAD5BC19737FA70090FD43 /* VMMagnifyComparerView.m */,
+			);
+			name = VMMagnifyComparerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFBAD58E19737D150090FD43 /* InfoPlist.strings in Resources */,
+				DFBAD5C01973DF7D0090FD43 /* border.pdf in Resources */,
+				DFBAD5B919737F580090FD43 /* image1.png in Resources */,
+				DFBAD5BA19737F580090FD43 /* image2.png in Resources */,
 				DFBAD59C19737D150090FD43 /* Images.xcassets in Resources */,
 				DFBAD59419737D150090FD43 /* Credits.rtf in Resources */,
 				DFBAD59A19737D150090FD43 /* MainMenu.xib in Resources */,
@@ -254,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFBAD59019737D150090FD43 /* main.m in Sources */,
+				DFBAD5BD19737FA70090FD43 /* VMMagnifyComparerView.m in Sources */,
 				DFBAD59719737D150090FD43 /* VMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
