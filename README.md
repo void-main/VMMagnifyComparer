@@ -9,7 +9,7 @@ As you can see, `VMMagnifyComparerView` is very useful if you want to compare tw
 <b>Note</b>: The mouse cursor is drawn only for this demo. If you run the example project by yourself, you wouldn't see the mouse cursor.
 
 ## Setup
-Copy files from `VMMagnifyComparerView` to your own project.
+Copy files from `VMMagnifyComparer` folder to your own project.
 
 ## APIs
 `VMMagnifyComparerView` is essentially a `NSImageView`, so you can set current display image with `setImage:` call.
