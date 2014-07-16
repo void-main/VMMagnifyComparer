@@ -22,5 +22,8 @@ Finally, you can set a border image with `setSegImage:`. Since the size of `VMMa
 
 For more detail, please check the example project.
 
+## Update
+- 2014.7.16 Add support for different `imageScaling` types in `NSImage`.
+
 ## License
 Check out [LICENSE](./LICENSE).

@@ -7,6 +7,7 @@
 //
 
 #import "VMMagnifyComparerView.h"
+#import "NSImageView+ImageSize.h"
 
 #define kDefaultMagnifierSizeRatio  3
 #define kOffScreenX                 -100000
@@ -40,6 +41,7 @@
 - (void)setMagnifierSizeRatio:(float)magnifierSizeRatio
 {
     [self willChangeValueForKey:@"magnifierSizeRatio"];
+
     _magnifierSizeRatio = magnifierSizeRatio;
     _magnifierSizeRatio = MAX(_magnifierSizeRatio, 1);
 
@@ -68,32 +70,48 @@
 
 - (void)mouseMoved:(NSEvent *)theEvent
 {
-    // Hide the cursor if not yet hidden
-    [self hideCursor];
-
     // Calculate frame rect with new center
     NSPoint center = [theEvent locationInWindow];
     center = [self convertPoint:center fromView:nil];
 
-    NSRect newRect = NSMakeRect(center.x - _magnifier.frame.size.width * 0.5,
-                                center.y - _magnifier.frame.size.height * 0.5,
-                                _magnifier.frame.size.width,
-                                _magnifier.frame.size.height);
-    newRect = [self constrainRect:newRect within:self.bounds];
-    _magnifier.frame = newRect;
+    NSRect imageRect = NSRectFromCGRect([self imageRect]);
+    if (NSPointInRect(center, imageRect)) {
+        // Hide the cursor if not yet hidden
+        [self hideCursor];
 
-    NSRect normRect = NSMakeRect(newRect.origin.x    / self.bounds.size.width,
-                                 newRect.origin.y    / self.bounds.size.height,
-                                 newRect.size.width  / self.bounds.size.width,
-                                 newRect.size.height / self.bounds.size.height);
+        NSRect newRect = NSMakeRect(center.x - _magnifier.frame.size.width * 0.5,
+                                    center.y - _magnifier.frame.size.height * 0.5,
+                                    _magnifier.frame.size.width,
+                                    _magnifier.frame.size.height);
+        newRect = [self constrainRect:newRect within:imageRect];
+        _magnifier.frame = newRect;
 
-    float imageWidth = self.image.size.width;
-    float imageHeight = self.image.size.height;
-    NSRect roiRect = NSMakeRect((normRect.origin.x + normRect.size.width * 0.25) * imageWidth,
-                                (normRect.origin.y + normRect.size.height * 0.25) * imageHeight,
-                                normRect.size.width * 0.25 * imageWidth,
-                                normRect.size.height * 0.5 * imageHeight);
-    _magnifier.image = [self magnifiedImage:roiRect];
+        float relativeOriX = center.x - imageRect.origin.x - _magnifier.frame.size.width * 0.5;
+        float relativeOriY = center.y - imageRect.origin.y - _magnifier.frame.size.height * 0.5;
+        NSRect relativeRect = NSMakeRect(relativeOriX,
+                                         relativeOriY,
+                                         _magnifier.frame.size.width,
+                                         _magnifier.frame.size.height);
+
+        relativeRect = [self constrainRect:relativeRect
+                                    within:NSMakeRect(0, 0, imageRect.size.width, imageRect.size.height)];
+
+        NSRect normRect = NSMakeRect(relativeRect.origin.x    / imageRect.size.width,
+                                     relativeRect.origin.y    / imageRect.size.height,
+                                     relativeRect.size.width  / imageRect.size.width,
+                                     relativeRect.size.height / imageRect.size.height);
+
+        float imageWidth = self.image.size.width;
+        float imageHeight = self.image.size.height;
+        NSRect roiRect = NSMakeRect((normRect.origin.x + normRect.size.width * 0.25) * imageWidth,
+                                    (normRect.origin.y + normRect.size.height * 0.25) * imageHeight,
+                                    normRect.size.width * 0.25 * imageWidth,
+                                    normRect.size.height * 0.5 * imageHeight);
+        _magnifier.image = [self magnifiedImage:roiRect];
+    } else {
+        [self unhideCursor];
+        [_magnifier setFrameOrigin:NSMakePoint(kOffScreenX, kOffScreenY)];
+    }
 }
 
 - (void)mouseExited:(NSEvent *)theEvent
@@ -112,8 +130,10 @@
 
 - (void)unhideCursor
 {
-    [NSCursor unhide];
-    _cursorIsHidden = NO;
+    if (_cursorIsHidden) {
+        [NSCursor unhide];
+        _cursorIsHidden = NO;
+    }
 }
 
 - (NSRect)constrainRect:(NSRect)rect within:(NSRect)constraint
