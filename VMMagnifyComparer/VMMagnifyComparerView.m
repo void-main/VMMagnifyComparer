@@ -93,7 +93,6 @@
 
     NSRect imageRect = NSRectFromCGRect([self imageRect]);
 
-    NSLog(@"Image Rect: %@ | Center: %@ | InRect: %d", NSStringFromRect(imageRect), NSStringFromPoint(center), NSPointInRect(center, imageRect));
     if (NSPointInRect(center, imageRect)) {
         // Hide the cursor if not yet hidden
         [self hideCursor];
@@ -178,8 +177,8 @@
 {
     NSImage *image = [[NSImage alloc] initWithSize:_magnifier.frame.size];
     [image lockFocus];
-    [self.image drawInRect:NSMakeRect(0, 0, image.size.width * 0.5, image.size.height) fromRect:roi operation:NSCompositeSourceOver fraction:1.0];
-    [self.duelImage drawInRect:NSMakeRect(image.size.width * 0.5, 0, image.size.width * 0.5, image.size.height) fromRect:roi operation:NSCompositeSourceOver fraction:1.0];
+    [self.duelImage drawInRect:NSMakeRect(0, 0, image.size.width * 0.5, image.size.height) fromRect:roi operation:NSCompositeSourceOver fraction:1.0];
+    [self.image drawInRect:NSMakeRect(image.size.width * 0.5, 0, image.size.width * 0.5, image.size.height) fromRect:roi operation:NSCompositeSourceOver fraction:1.0];
     [self.segImage drawInRect:NSMakeRect(0, 0, image.size.width, image.size.height) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
 
     [image unlockFocus];
