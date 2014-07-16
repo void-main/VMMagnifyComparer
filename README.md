@@ -6,6 +6,10 @@ A magnified comparison between two images.
 
 As you can see, `VMMagnifyComparerView` is very useful if you want to compare two images in detail.
 
+![Demo](./demo-scroll.gif)
+
+Of course, you can scroll with mouse or trackpad, to zoom in/out the magnified part.
+
 <b>Note</b>: The mouse cursor is drawn only for this demo. If you run the example project by yourself, you wouldn't see the mouse cursor.
 
 ## Setup
