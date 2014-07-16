@@ -104,12 +104,12 @@
         newRect = [self constrainRect:newRect within:imageRect];
         _magnifier.frame = newRect;
 
-        float relativeOriX = center.x - imageRect.origin.x - _magnifier.frame.size.width * 0.5;
-        float relativeOriY = center.y - imageRect.origin.y - _magnifier.frame.size.height * 0.5;
+        float relativeOriX = center.x - imageRect.origin.x - _magnifier.frame.size.width * 0.25;
+        float relativeOriY = center.y - imageRect.origin.y - _magnifier.frame.size.height * 0.25;
         NSRect relativeRect = NSMakeRect(relativeOriX,
                                          relativeOriY,
-                                         _magnifier.frame.size.width,
-                                         _magnifier.frame.size.height);
+                                         _magnifier.frame.size.width * 0.25,
+                                         _magnifier.frame.size.height * 0.5);
 
         relativeRect = [self constrainRect:relativeRect
                                     within:NSMakeRect(0, 0, imageRect.size.width, imageRect.size.height)];
@@ -121,10 +121,10 @@
 
         float imageWidth = self.image.size.width;
         float imageHeight = self.image.size.height;
-        NSRect roiRect = NSMakeRect((normRect.origin.x + normRect.size.width * 0.25) * imageWidth,
-                                    (normRect.origin.y + normRect.size.height * 0.25) * imageHeight,
-                                    normRect.size.width * 0.25 * imageWidth,
-                                    normRect.size.height * 0.5 * imageHeight);
+        NSRect roiRect = NSMakeRect(normRect.origin.x * imageWidth,
+                                    normRect.origin.y * imageHeight,
+                                    normRect.size.width * imageWidth,
+                                    normRect.size.height * imageHeight);
         _magnifier.image = [self magnifiedImage:roiRect];
     } else {
         [self unhideCursor];
