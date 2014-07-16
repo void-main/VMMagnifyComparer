@@ -33,6 +33,14 @@
     [self resetTrackingRect];
 }
 
+- (void)viewDidEndLiveResize
+{
+    [self resetTrackingRect];
+
+    // Force re-calculate magifier size
+    self.magnifierSizeRatio = self.magnifierSizeRatio;
+}
+
 - (float)magnifierSizeRatio
 {
     return _magnifierSizeRatio;
@@ -45,11 +53,20 @@
     _magnifierSizeRatio = magnifierSizeRatio;
     _magnifierSizeRatio = MAX(_magnifierSizeRatio, 1);
 
-    float shorterSide = MIN(self.frame.size.width, self.frame.size.height);
+    NSRect imageRect = NSRectFromCGRect([self imageRect]);
+    float shorterSide = MIN(imageRect.size.width, imageRect.size.height);
     [_magnifier setFrameSize:NSMakeSize(shorterSide / self.magnifierSizeRatio,
                                         shorterSide / self.magnifierSizeRatio)];
 
     [self didChangeValueForKey:@"magnifierSizeRatio"];
+}
+
+- (void)setImage:(NSImage *)newImage
+{
+    [super setImage:newImage];
+
+    // Force re-calculate magifier size
+    self.magnifierSizeRatio = self.magnifierSizeRatio;
 }
 
 #pragma mark -
@@ -75,6 +92,8 @@
     center = [self convertPoint:center fromView:nil];
 
     NSRect imageRect = NSRectFromCGRect([self imageRect]);
+
+    NSLog(@"Image Rect: %@ | Center: %@ | InRect: %d", NSStringFromRect(imageRect), NSStringFromPoint(center), NSPointInRect(center, imageRect));
     if (NSPointInRect(center, imageRect)) {
         // Hide the cursor if not yet hidden
         [self hideCursor];

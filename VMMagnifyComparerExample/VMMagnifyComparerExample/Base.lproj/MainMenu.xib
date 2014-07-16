@@ -676,12 +676,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGW-dR-8px" customClass="VMMagnifyComparerView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VGW-dR-8px" customClass="VMMagnifyComparerView">
+                        <rect key="frame" x="7" y="7" width="586" height="486"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="dr2-qg-quC"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="dr2-qg-quC"/>
                     </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="VGW-dR-8px" secondAttribute="bottom" constant="10" id="Tg5-xs-eZZ"/>
+                    <constraint firstAttribute="trailing" secondItem="VGW-dR-8px" secondAttribute="trailing" constant="10" id="gIZ-uq-fyc"/>
+                    <constraint firstItem="VGW-dR-8px" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="10" id="suL-yl-US1"/>
+                    <constraint firstItem="VGW-dR-8px" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="10" id="xAz-So-aGb"/>
+                </constraints>
             </view>
         </window>
     </objects>
