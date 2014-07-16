@@ -62,18 +62,12 @@
 
     float widthRatio = fmaxf(self.image.size.width / self.frame.size.width, 1);
     float heightRatio = fmaxf(self.image.size.height / self.frame.size.height, 1);
-    _maxMagnification = fmax(widthRatio, heightRatio);
-    _imageViewRatio = _maxMagnification;
-    if (fabs(_maxMagnification - 1) < FLT_EPSILON) _maxMagnification = 2; // Manually set max to 2
+    _imageViewRatio = fmax(widthRatio, heightRatio);
+    _minMagnification = fmax(1 / _imageViewRatio, 1);
+    _maxMagnification = 2 * _imageViewRatio;
 
-    // Validate magnification and request redraw
-    if (self.magnification < 1) {
-        self.magnification = 1;
-    } else if (self.magnification > _maxMagnification) {
-        self.magnification = _maxMagnification;
-    } else {
-        self.magnification = self.magnification;
-    }
+    // Default to middle point
+    self.magnification = (_minMagnification + _maxMagnification) * 0.5;
 
     [self didChangeValueForKey:@"magnifierSizeRatio"];
 }
@@ -84,7 +78,6 @@
 
     // Force re-calculate magifier size
     self.magnifierSizeRatio = self.magnifierSizeRatio;
-    self.magnification = kDefaultMagnification;
 }
 
 #pragma mark -
@@ -98,7 +91,7 @@
 {
     [self willChangeValueForKey:@"magnification"];
 
-    if (magnification < 1) magnification = 1;
+    if (magnification < _minMagnification) magnification = _minMagnification;
     if (magnification > _maxMagnification) magnification = _maxMagnification;
 
     _magnification = magnification;
@@ -150,8 +143,8 @@
         newRect = [self constrainRect:newRect within:imageRect];
         _magnifier.frame = newRect;
 
-        float imageBlockWidth = _magnifier.frame.size.width * _imageViewRatio / self.magnification;
-        float imageBlockHeight = _magnifier.frame.size.height * _imageViewRatio / self.magnification;
+        float imageBlockWidth = _magnifier.frame.size.width / self.magnification;
+        float imageBlockHeight = _magnifier.frame.size.height / self.magnification;
 
         float relativeOriX = center.x - imageRect.origin.x - imageBlockWidth * 0.5;
         float relativeOriY = center.y - imageRect.origin.y - imageBlockHeight * 0.5;

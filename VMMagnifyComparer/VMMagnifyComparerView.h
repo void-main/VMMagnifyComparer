@@ -15,6 +15,7 @@
     NSTrackingArea *_trackingArea;
 
     float _imageViewRatio;
+    float _minMagnification;
     float _maxMagnification;
 }
 
