@@ -13,10 +13,15 @@
 
     BOOL _cursorIsHidden;
     NSTrackingArea *_trackingArea;
+
+    float _imageViewRatio;
+    float _maxMagnification;
 }
 
 @property (nonatomic, strong) NSImage *duelImage;
 @property (nonatomic, strong) NSImage *segImage;
 @property                     float    magnifierSizeRatio;
+
+@property                     float    magnification;
 
 @end

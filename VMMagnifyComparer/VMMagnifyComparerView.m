@@ -9,12 +9,14 @@
 #import "VMMagnifyComparerView.h"
 #import "NSImageView+ImageSize.h"
 
+#define kDefaultMagnification       2
 #define kDefaultMagnifierSizeRatio  3
 #define kOffScreenX                 -100000
 #define kOffScreenY                 -100000
 
 @implementation VMMagnifyComparerView
 
+@synthesize magnification = _magnification;
 @synthesize magnifierSizeRatio = _magnifierSizeRatio;
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -58,6 +60,21 @@
     [_magnifier setFrameSize:NSMakeSize(shorterSide / self.magnifierSizeRatio,
                                         shorterSide / self.magnifierSizeRatio)];
 
+    float widthRatio = fmaxf(self.image.size.width / self.frame.size.width, 1);
+    float heightRatio = fmaxf(self.image.size.height / self.frame.size.height, 1);
+    _maxMagnification = fmax(widthRatio, heightRatio);
+    _imageViewRatio = _maxMagnification;
+    if (fabs(_maxMagnification - 1) < FLT_EPSILON) _maxMagnification = 2; // Manually set max to 2
+
+    // Validate magnification and request redraw
+    if (self.magnification < 1) {
+        self.magnification = 1;
+    } else if (self.magnification > _maxMagnification) {
+        self.magnification = _maxMagnification;
+    } else {
+        self.magnification = self.magnification;
+    }
+
     [self didChangeValueForKey:@"magnifierSizeRatio"];
 }
 
@@ -67,6 +84,30 @@
 
     // Force re-calculate magifier size
     self.magnifierSizeRatio = self.magnifierSizeRatio;
+    self.magnification = kDefaultMagnification;
+}
+
+#pragma mark -
+#pragma mark Modify Magnification
+- (float)magnification
+{
+    return _magnification;
+}
+
+- (void)setMagnification:(float)magnification
+{
+    [self willChangeValueForKey:@"magnification"];
+
+    if (magnification < 1) magnification = 1;
+    if (magnification > _maxMagnification) magnification = _maxMagnification;
+
+    _magnification = magnification;
+
+    NSPoint screenPoint = [NSEvent mouseLocation];
+    NSPoint windowPoint = [self.window convertScreenToBase:screenPoint];
+    [self showMagnifierAtLocation:windowPoint];
+
+    [self didChangeValueForKey:@"magnification"];
 }
 
 #pragma mark -
@@ -89,6 +130,11 @@
 {
     // Calculate frame rect with new center
     NSPoint center = [theEvent locationInWindow];
+    [self showMagnifierAtLocation:center];
+}
+
+- (void)showMagnifierAtLocation:(NSPoint)center
+{
     center = [self convertPoint:center fromView:nil];
 
     NSRect imageRect = NSRectFromCGRect([self imageRect]);
@@ -104,12 +150,15 @@
         newRect = [self constrainRect:newRect within:imageRect];
         _magnifier.frame = newRect;
 
-        float relativeOriX = center.x - imageRect.origin.x - _magnifier.frame.size.width * 0.25;
-        float relativeOriY = center.y - imageRect.origin.y - _magnifier.frame.size.height * 0.25;
+        float imageBlockWidth = _magnifier.frame.size.width * _imageViewRatio / self.magnification;
+        float imageBlockHeight = _magnifier.frame.size.height * _imageViewRatio / self.magnification;
+
+        float relativeOriX = center.x - imageRect.origin.x - imageBlockWidth * 0.5;
+        float relativeOriY = center.y - imageRect.origin.y - imageBlockHeight * 0.5;
         NSRect relativeRect = NSMakeRect(relativeOriX,
                                          relativeOriY,
-                                         _magnifier.frame.size.width * 0.25,
-                                         _magnifier.frame.size.height * 0.5);
+                                         imageBlockWidth * 0.5,
+                                         imageBlockHeight);
 
         relativeRect = [self constrainRect:relativeRect
                                     within:NSMakeRect(0, 0, imageRect.size.width, imageRect.size.height)];
@@ -136,6 +185,13 @@
 {
     [self unhideCursor];
     [_magnifier setFrameOrigin:NSMakePoint(kOffScreenX, kOffScreenY)];
+}
+
+- (void)scrollWheel:(NSEvent *)theEvent
+{
+    // Scroll up to increase
+    // Scroll down to decrease
+    self.magnification -= theEvent.deltaY * 0.01;
 }
 
 - (void)hideCursor
