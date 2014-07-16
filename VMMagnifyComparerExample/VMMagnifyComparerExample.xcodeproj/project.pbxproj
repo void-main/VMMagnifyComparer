@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF4F61E01975F29F00C6CC04 /* VMMagnifyComparerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4F61DF1975F29F00C6CC04 /* VMMagnifyComparerView.m */; };
+		DF4F61E31975F2C100C6CC04 /* NSImageView+ImageSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4F61E21975F2C100C6CC04 /* NSImageView+ImageSize.m */; };
 		DFBAD58419737D150090FD43 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFBAD58319737D150090FD43 /* Cocoa.framework */; };
 		DFBAD58E19737D150090FD43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD58C19737D150090FD43 /* InfoPlist.strings */; };
 		DFBAD59019737D150090FD43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBAD58F19737D150090FD43 /* main.m */; };
@@ -20,7 +22,6 @@
 		DFBAD5AE19737D150090FD43 /* VMMagnifyComparerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBAD5AD19737D150090FD43 /* VMMagnifyComparerExampleTests.m */; };
 		DFBAD5B919737F580090FD43 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD5B719737F580090FD43 /* image1.png */; };
 		DFBAD5BA19737F580090FD43 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD5B819737F580090FD43 /* image2.png */; };
-		DFBAD5BD19737FA70090FD43 /* VMMagnifyComparerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBAD5BC19737FA70090FD43 /* VMMagnifyComparerView.m */; };
 		DFBAD5C01973DF7D0090FD43 /* border.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD5BF1973DF7D0090FD43 /* border.pdf */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF4F61DE1975F29F00C6CC04 /* VMMagnifyComparerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMagnifyComparerView.h; sourceTree = "<group>"; };
+		DF4F61DF1975F29F00C6CC04 /* VMMagnifyComparerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMagnifyComparerView.m; sourceTree = "<group>"; };
+		DF4F61E11975F2C100C6CC04 /* NSImageView+ImageSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImageView+ImageSize.h"; sourceTree = "<group>"; };
+		DF4F61E21975F2C100C6CC04 /* NSImageView+ImageSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImageView+ImageSize.m"; sourceTree = "<group>"; };
 		DFBAD58019737D150090FD43 /* VMMagnifyComparerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMMagnifyComparerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBAD58319737D150090FD43 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DFBAD58619737D150090FD43 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -56,8 +61,6 @@
 		DFBAD5AD19737D150090FD43 /* VMMagnifyComparerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMagnifyComparerExampleTests.m; sourceTree = "<group>"; };
 		DFBAD5B719737F580090FD43 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
 		DFBAD5B819737F580090FD43 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
-		DFBAD5BB19737FA70090FD43 /* VMMagnifyComparerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VMMagnifyComparerView.h; path = ../../VMMagnifyComparer/VMMagnifyComparerView.h; sourceTree = "<group>"; };
-		DFBAD5BC19737FA70090FD43 /* VMMagnifyComparerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VMMagnifyComparerView.m; path = ../../VMMagnifyComparer/VMMagnifyComparerView.m; sourceTree = "<group>"; };
 		DFBAD5BF1973DF7D0090FD43 /* border.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = border.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,10 +173,13 @@
 		DFBAD5BE19737FAE0090FD43 /* VMMagnifyComparerView */ = {
 			isa = PBXGroup;
 			children = (
-				DFBAD5BB19737FA70090FD43 /* VMMagnifyComparerView.h */,
-				DFBAD5BC19737FA70090FD43 /* VMMagnifyComparerView.m */,
+				DF4F61DE1975F29F00C6CC04 /* VMMagnifyComparerView.h */,
+				DF4F61DF1975F29F00C6CC04 /* VMMagnifyComparerView.m */,
+				DF4F61E11975F2C100C6CC04 /* NSImageView+ImageSize.h */,
+				DF4F61E21975F2C100C6CC04 /* NSImageView+ImageSize.m */,
 			);
 			name = VMMagnifyComparerView;
+			path = ../../VMMagnifyComparer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFBAD59019737D150090FD43 /* main.m in Sources */,
-				DFBAD5BD19737FA70090FD43 /* VMMagnifyComparerView.m in Sources */,
+				DF4F61E01975F29F00C6CC04 /* VMMagnifyComparerView.m in Sources */,
+				DF4F61E31975F2C100C6CC04 /* NSImageView+ImageSize.m in Sources */,
 				DFBAD59719737D150090FD43 /* VMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,6 +500,7 @@
 				DFBAD5B319737D150090FD43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DFBAD5B419737D150090FD43 /* Build configuration list for PBXNativeTarget "VMMagnifyComparerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +509,7 @@
 				DFBAD5B619737D150090FD43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
