@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DF4F61E01975F29F00C6CC04 /* VMMagnifyComparerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4F61DF1975F29F00C6CC04 /* VMMagnifyComparerView.m */; };
-		DF4F61E31975F2C100C6CC04 /* NSImageView+ImageSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4F61E21975F2C100C6CC04 /* NSImageView+ImageSize.m */; };
 		DFBAD58419737D150090FD43 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFBAD58319737D150090FD43 /* Cocoa.framework */; };
 		DFBAD58E19737D150090FD43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFBAD58C19737D150090FD43 /* InfoPlist.strings */; };
 		DFBAD59019737D150090FD43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBAD58F19737D150090FD43 /* main.m */; };
@@ -38,8 +37,6 @@
 /* Begin PBXFileReference section */
 		DF4F61DE1975F29F00C6CC04 /* VMMagnifyComparerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMagnifyComparerView.h; sourceTree = "<group>"; };
 		DF4F61DF1975F29F00C6CC04 /* VMMagnifyComparerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMagnifyComparerView.m; sourceTree = "<group>"; };
-		DF4F61E11975F2C100C6CC04 /* NSImageView+ImageSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImageView+ImageSize.h"; sourceTree = "<group>"; };
-		DF4F61E21975F2C100C6CC04 /* NSImageView+ImageSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImageView+ImageSize.m"; sourceTree = "<group>"; };
 		DFBAD58019737D150090FD43 /* VMMagnifyComparerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMMagnifyComparerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBAD58319737D150090FD43 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DFBAD58619737D150090FD43 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -175,8 +172,6 @@
 			children = (
 				DF4F61DE1975F29F00C6CC04 /* VMMagnifyComparerView.h */,
 				DF4F61DF1975F29F00C6CC04 /* VMMagnifyComparerView.m */,
-				DF4F61E11975F2C100C6CC04 /* NSImageView+ImageSize.h */,
-				DF4F61E21975F2C100C6CC04 /* NSImageView+ImageSize.m */,
 			);
 			name = VMMagnifyComparerView;
 			path = ../../VMMagnifyComparer;
@@ -286,7 +281,6 @@
 			files = (
 				DFBAD59019737D150090FD43 /* main.m in Sources */,
 				DF4F61E01975F29F00C6CC04 /* VMMagnifyComparerView.m in Sources */,
-				DF4F61E31975F2C100C6CC04 /* NSImageView+ImageSize.m in Sources */,
 				DFBAD59719737D150090FD43 /* VMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
