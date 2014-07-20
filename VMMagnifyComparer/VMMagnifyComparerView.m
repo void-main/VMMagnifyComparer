@@ -241,9 +241,12 @@
     return image;
 }
 
+@end
 
 #pragma mark -
 #pragma mark Actual Image Size
+@implementation VMMagnifyComparerView (ImageSize)
+
 - (CGSize)imageScale
 {
     CGFloat sx = self.frame.size.width / self.image.size.width;
